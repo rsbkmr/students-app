@@ -1,0 +1,38 @@
+GET http://localhost:3000/student
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMyLCJpYXQiOjE2NjczMzE4NTN9.qumCXCbOz-lVbMBJ8FcF-4spVNSNuji2xzcUVVDmzNA
+
+###
+
+POST http://localhost:3000/student
+Content-Type: application/json
+
+{
+  "name": "Anjali",
+  "roll": 22,
+  "course": "BSC"
+}
+
+
+###
+
+PUT http://localhost:3000/student/22
+Content-Type: application/json
+
+{
+  "name": "Anjali",
+  "course": "B.TECH"
+}
+
+###
+
+DELETE http://localhost:3000/student/45
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMyLCJpYXQiOjE2NjczMzE4NTN9.qumCXCbOz-lVbMBJ8FcF-4spVNSNuji2xzcUVVDmzNA
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": ""
+}
