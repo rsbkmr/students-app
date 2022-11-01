@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className="navbar bg-dark navbar-dark">
       <div className="container-fluid" style={{ maxWidth: 700 }}>
         <Link to="/" className="navbar-brand">
-          Navbar
+          Students App
         </Link>
         <div className="d-flex">
           {token ? (

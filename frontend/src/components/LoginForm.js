@@ -1,11 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { TokenContext } from "../context/Token";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { setToken } = useContext(TokenContext);
+  const navigate = useNavigate();
 
   const login = (e) => {
     e.preventDefault();
@@ -25,6 +27,7 @@ const LoginForm = () => {
         data.msg || localStorage.setItem("token", data.token);
         data.msg || setToken(data.token);
       });
+    navigate("/");
   };
 
   return (
