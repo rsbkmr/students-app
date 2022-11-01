@@ -15,7 +15,7 @@ const AddStudent = () => {
     if (roll === "" || name === "" || course === "") {
       return setError("Empty Fields");
     }
-    fetch("http://localhost:3000/student", {
+    fetch("https://students-app-api.herokuapp.com/student", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
