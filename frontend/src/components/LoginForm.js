@@ -9,7 +9,7 @@ const LoginForm = () => {
 
   const login = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/login", {
+    fetch("https://students-app-api.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

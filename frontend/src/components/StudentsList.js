@@ -7,7 +7,7 @@ const StudentsList = () => {
   const { students, setStudents } = useContext(StudentsContext);
 
   const deleteStudent = (roll) => {
-    fetch(`http://localhost:3000/student/${roll}`, {
+    fetch(`https://students-app-api.herokuapp.com/student/${roll}`, {
       method: "DELETE",
       headers: {
         Authorization: token,
@@ -21,7 +21,7 @@ const StudentsList = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/student", {
+    fetch("https://students-app-api.herokuapp.com/student", {
       headers: {
         Authorization: token,
       },
